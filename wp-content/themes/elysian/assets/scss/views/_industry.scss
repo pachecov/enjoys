@@ -1,0 +1,313 @@
+// Hero
+.section--hero {
+  &__industry {
+    @include backgroundImage(center, $color-blue, cover);
+    min-height: 755px;
+    .item__content {
+      padding-top: 228px;
+      color: $color-white;
+      h2 {
+        @include font-responsive(48, 30);
+        font-weight: 700;
+        margin-bottom: 70px;
+      }
+    }
+    @media (max-width: $desktop){
+      min-height: 525px;
+    }
+  }
+}
+
+// Does
+.section--does {
+  padding-top: 120px;
+  &__img {
+    p {
+      @include font-responsive(21, 18);
+      line-height: 36px;
+      margin-bottom: 70px;
+    }
+    &__bg {
+      position: relative;
+      img {
+        position: relative;
+        z-index: 1;
+        min-height: 427px;
+        object-fit: cover;
+      }
+      &::before {
+        content: "";
+        width: 72px;
+        height: 110%;
+        background-color: #f47d20;
+        position: absolute;
+        top: -22px;
+        left: -25px;
+      }
+    }
+  }
+  &__text {
+    padding-left: 40px;
+    h2 {
+      @include font-responsive(40, 30);
+      font-weight: 600;
+      line-height: 48px;
+      margin-bottom: 40px;
+    }
+    ul {
+      li {
+        padding-left: 30px;
+        position: relative;
+        @include font-responsive(18, 16);
+        font-weight: 600;
+        line-height: 28px;
+        margin-bottom: 29px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 6px;
+          left: 0;
+          width: 15px;
+          height: 10px;
+          background-color: $color-blue;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+  .section--does,
+  .section--investing{
+    display: none;
+  }
+  @media (max-width: $small-tablet) {
+    padding-top: 50px;
+  }
+}
+
+// Investing
+.section--investing {
+  background-color: $body_bkg2;
+  padding: 220px 0 80px;
+  margin-top: -87px;
+  &__head {
+    max-width: 840px;
+    margin: 0 auto;
+    text-align: center;
+    h2 {
+      @include font-responsive(46, 30);
+      font-weight: 500;
+      margin-bottom: 40px;
+      span {
+        color: $color-blue;
+        font-weight: 600;
+      }
+    }
+    p {
+      @include font-responsive(21, 18);
+      line-height: 36px;
+      margin-bottom: 70px;
+    }
+  }
+  &__card {
+    text-align: center;
+    border-top: 2px solid #7baadc;
+    h3 {
+      padding: 34px 0;
+      @include font-responsive(22, 18);
+      font-weight: 700;
+      margin: 0;
+    }
+    &__img {
+      @include backgroundImage(center, $color-blue, cover);
+      min-height: 284px;
+    }
+    p {
+      padding: 32px 0 0;
+      @include font-responsive(21, 16);
+      line-height: 1.556;
+      color: #231f20;
+      font-weight: 500;
+    }
+  }
+  &__button {
+    text-align: center;
+    transform: translateY(115px);
+  }
+  @media (max-width: $small-tablet) {
+    padding: 50px 0;
+    margin-top: 0;
+    &__card {
+      margin-bottom: 50px;
+    }
+    &__button {
+      transform: translateY(0px);
+    }
+  }
+}
+
+// Testimonial
+.section--testimonial {
+  @include backgroundImage(center, $body_bkg2, cover);
+  min-height: 653px;
+  padding: 158px 0;
+  .container {
+    max-width: 975px;
+  }
+  &__text {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    &--content {
+      h2 {
+        @include font-responsive(40, 30);
+        font-weight: 600;
+        line-height: 48px;
+        margin-bottom: 40px;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: -75px;
+          left: 0;
+          width: 65px;
+          height: 49px;
+          background-image: url("../../images/quote.png");
+          background-size: cover;
+        }
+      }
+    }
+    @media (max-width: $small-tablet) {
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+  }
+  &__items {
+    position: relative;
+    &__card {
+      background-color: $color-white;
+      padding: 47px;
+      border-radius: 10px;
+      position: relative;
+      p {
+        @include font-responsive(18, 16);
+        line-height: 28px;
+        margin-bottom: 25px;
+      }
+      h5 {
+        color: $color-blue;
+        @include font-responsive(20, 18);
+        font-weight: 500;
+        margin-bottom: 0px;
+      }
+      h6 {
+        @include font-responsive(18, 16);
+        font-weight: 400;
+        margin-bottom: 0px;
+        font-style: italic;
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      width: 100%;
+      height: 119%;
+      background-color: #1e5e97;
+      border-radius: 10px;
+      @media (max-width: $small-phone){
+        height: 114%;
+        right: 0;
+      }
+    }
+    .slick-next:before,
+    .slick-prev:before {
+      display: none;
+    }
+    .slick-dots {
+      transform: translateX(-115%);
+      bottom: 40px;
+      li {
+        margin: 0 10px;
+      }
+      li button:before {
+        font-size: 30px;
+        content: "";
+        width: 28px;
+        height: 7px;
+        background-color: #555555;
+      }
+      li.slick-active button:before {
+        background-color: $link-color;
+        opacity: 0.75;
+      }
+      @media (max-width: $small-tablet) {
+        transform: translateX(0%);
+        bottom: -60px;
+      }
+    }
+  }
+  @media (max-width: $small-tablet) {
+    padding: 60px 0;
+  }
+}
+
+// Case
+.section--case {
+  padding: 190px 0;
+  &__text {
+    h2 {
+      @include font-responsive(46, 30);
+      font-weight: 500;
+      margin-bottom: 40px;
+      span {
+        color: $color-blue;
+        font-weight: 600;
+      }
+    }
+    p {
+      @include font-responsive(18, 16);
+      font-weight: 500;
+      line-height: 28px;
+      margin-bottom: 25px;
+    }
+    a {
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      i {
+        font-size: 25px;
+        margin-left: 8px;
+      }
+    }
+  }
+  &__img {
+    position: relative;
+    &__bg {
+      @include backgroundImage(center, $color-blue, cover);
+      min-height: 527px;
+      &::before {
+        content: "";
+        width: 71px;
+        height: 110%;
+        background-color: #f47d20;
+        position: absolute;
+        top: -30px;
+        right: -27px;
+        z-index: -1;
+      }
+    }
+  }
+  @media (max-width: $small-tablet) {
+    padding: 50px 0;
+  }
+}
+
+// Our Solutions 
+.our_solutions{
+  .section--solutions{
+    background-color: $color-white;
+  }
+}

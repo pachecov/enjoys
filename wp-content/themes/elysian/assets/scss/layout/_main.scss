@@ -1,0 +1,142 @@
+.section--hero {
+  h2 {
+    color: $color-white;
+    @include font-responsive(48, 30);
+    margin-bottom: 60px;
+  }
+}
+.section--guide__box {
+  background: url(../../images/bottom-sec-1.png) !important;
+  background-size: 100% 100% !important;
+  @media (max-width: $small-tablet ){
+    background: none !important;
+  }
+}
+
+// 404
+.error404 {
+  .site-inner {
+    // max-width: 100%;
+    // padding-right: 0;
+    // padding-left: 0;
+    // padding: 0;
+    padding-bottom: 100px;
+    background: #f4f7f9;
+    max-width: 100%;
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+    }
+    p {
+      text-align: center;
+    }
+  }
+  #genesis-content {
+    width: 100%;
+    text-align: center;
+  }
+  .search-form {
+    margin-right: auto;
+    margin-left: auto;
+    input[type="submit"] {
+      background-color: $base-color;
+      color: $color-white;
+      &:hover {
+        opacity: 0.85;
+      }
+    }
+  }
+}
+
+// Search
+.search {
+  h1 {
+    font-size: 3rem;
+  }
+  .site-inner {
+    padding-bottom: 150px;
+    background: #f4f7f9;
+    max-width: 100%;
+  }
+  .post-wrap {
+    background: #fff;
+    margin-bottom: 35px;
+    padding: 35px 15px;
+    .search-post-title {
+      @include font-responsive(30, 20);
+      font-weight: 600;
+      margin-bottom: 30px;
+      display: block;
+    }
+  }
+  .search-form-submit {
+    background-color: $base-color;
+    margin-bottom: 30px;
+  }
+}
+
+// Single Post
+.hero-single {
+  @include backgroundImage(center, $color-blue, cover);
+  min-height: 641px;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  .container{
+    max-width: 800px;
+  }
+  h2 {
+    text-align: center;
+    color: #fff;
+    @include font-responsive(48, 30);
+  }
+}
+.post-template-default {
+  .site-inner {
+    background-color: $body-bkg2;
+    padding-bottom: 200px;
+    max-width: 100%;
+  }
+  
+  .entry-content {
+    h1 {
+      @include font-responsive(46, 30);
+    }
+    h2 {
+      @include font-responsive(40, 30);
+    }
+    h3 {
+      @include font-responsive(36, 25);
+    }
+    h4 {
+      @include font-responsive(30, 20);
+    }
+    ul {
+      li {
+        list-style: none;
+        padding-left: 30px;
+        position: relative;
+        @include font-responsive(18, 16);
+        font-weight: 600;
+        line-height: 28px;
+        margin-bottom: 29px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 6px;
+          left: 0;
+          width: 15px;
+          height: 10px;
+          background-color: $color-blue;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+  .entry-meta,
+  .entry-footer,
+  .entry-comments,
+  .comment-respond {
+    display: none;
+  }
+}

@@ -1,0 +1,104 @@
+.general-hero{
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    h2{
+        color: #fff;
+        @include font-responsive(48, 30);
+    }
+}
+
+.section-contact{
+    padding: 120px 0 0  ;
+    h2{
+        line-height: 1.407;
+        @include font-responsive(27, 20);
+        font-weight: 500;
+    }
+    .contact-side{
+        margin-top: -235px;
+        background: #fff;
+        padding: 50px 40px;
+        box-shadow: 0px 0px 38px -20px rgba(0,0,0,0.75);
+        h4{
+            letter-spacing: 0.2em;
+            margin-bottom: 25px;
+        }
+        .location{
+          border-bottom: 2px solid #dadfdf;
+            margin-bottom: 60px;
+            a{
+              color: $base-color;
+            }
+        }
+        .business{
+          border-bottom: 2px solid #dadfdf;
+            margin-bottom: 50px;
+        }
+        .inquiries{
+          border-bottom: 2px solid #dadfdf;
+            margin-bottom: 50px;
+        }
+    }
+    .socials{
+        a{
+            color: #1f619b;
+            i{
+                font-size: 50px;
+                margin-right: 12px;
+            }
+        }
+    }
+    input{
+        background-color: #f4f7f9;
+        border: none;
+        margin-bottom: 25px;
+        border-radius: 8px;
+        @include font-responsive(24, 18);
+    }
+    
+    textarea{
+        background-color: #f4f7f9;
+        border: none;
+        margin-bottom: 25px;
+        border-radius: 8px;
+        @include font-responsive(24, 18);
+    }
+    form{
+        margin-top: 50px;
+      p:nth-child(3){
+        margin: 0;
+      }
+    }
+    .content-wrap{
+        max-width: 720px;
+    }
+    .contact-bottom{
+      margin-top: 150px;
+      margin-bottom: -250px;
+    }
+
+    .wpcf7-submit{
+      background-color: $base-color;
+      padding: 20px 50px;
+      margin: 0;
+      @include font-responsive(24, 18);
+    }
+    &__bg{
+      background-color: $body-bkg2;
+      min-height: 500px;
+    }
+    @media (max-width: $small-tablet ){
+    padding: 50px 0 0;
+    .contact-side{
+      margin-top: 40px;
+    }
+    .contact-bottom{
+      margin-top: 50px;
+      margin-bottom: -100px;
+    }
+    &__bg{
+      min-height: 200px;
+    }
+    }
+}

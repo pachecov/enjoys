@@ -1,0 +1,66 @@
+.btn {
+  padding: 20px 20px;
+  min-height: 50px;
+  background-color: $base-color;
+  color: $color-white;
+  text-decoration: none;
+  @include inlineFlexCenter(center);
+  &--orange {
+    @include font-responsive(20, 18);
+    font-weight: 600;
+    padding: 20px 46px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    transition:  ease-out .5s;
+    &:hover{
+      &::before{
+        top: -12px;
+        left: -12px;
+        width: 108%;
+        height: 138%;
+      }
+      color: #fff;
+      opacity: .85;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: -16px;
+      left: -21px;
+      width: 115%;
+      height: 145%;
+      background-color: rgba(244, 125, 32, 0.5);
+      border-radius: 10px;
+      z-index: -1;
+      transition: all .5s ease;
+    }
+    i {
+      margin-left: 8px;
+    }
+  }
+  
+}
+
+.btn--scheduelle {
+  margin-left: 20px;
+
+  a {
+    @extend .btn;
+    padding: 15px 25px !important;
+    color: $color-white !important;
+    border-radius: 8px;
+    line-height: normal;
+    &:hover{
+      opacity: .85;
+    }
+  }
+}
+
+.section--guide__box{
+  .wpcf7 button[type=submit]{
+    &:hover{
+      opacity: .85;
+    }
+  }
+} 
